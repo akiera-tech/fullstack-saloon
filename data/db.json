@@ -7,6 +7,22 @@
       "passwordHash": "424207a5ab0de126a053baa2b258d3ccfe0bf2f60bc70aa19f98b61f721d148d29abe984dcc126f52421d3d619dcb9a1ec60d013982e298d65615308e3517f00",
       "salt": "561b2f811dcd352cddb64724031e9c90",
       "createdAt": "2026-07-06T10:35:18.890Z"
+    },
+    {
+      "id": "1ba2bd0e-454c-48db-9def-f1a136ac153c",
+      "name": "hamid",
+      "email": "ali.hamid161999@gmail.com",
+      "passwordHash": "d9501a363479e73dd3629e4a515936905449953311fedbd9de5bd4d6b36df75b33255f4eb96bc95014bf1f05f6484ea9d3ecf291c0bb914ebb4fb17aa0ed982e",
+      "salt": "2450e416db2aca7fbedf2e99df8c4a2c",
+      "createdAt": "2026-07-06T11:07:26.502Z"
+    },
+    {
+      "id": "bd1fe286-fff0-40ac-89eb-7d5f7609b74a",
+      "name": "test",
+      "email": "test@gmail.com",
+      "passwordHash": "c5c426f93e6df585b1e1a9f43ae5792a870724feb80e442ce74e0a37e585f7e32b71c94a593fbe6a8c6a30d53ce78b4c8076675abd6c5f709aea385c60b1990b",
+      "salt": "5ef7c05d887f4ebb195b1e56c420e72e",
+      "createdAt": "2026-07-06T11:07:55.743Z"
     }
   ],
   "bookings": [
@@ -19,6 +35,29 @@
       "time": "18:07",
       "status": "cancelled",
       "createdAt": "2026-07-06T10:35:40.976Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "haircut",
+      "name": "Haircut",
+      "description": "Classic haircut with wash and style.",
+      "price": 35,
+      "durationMinutes": 30
+    },
+    {
+      "id": "beard-trim",
+      "name": "Beard Trim",
+      "description": "Precision beard shaping and trim.",
+      "price": 20,
+      "durationMinutes": 15
+    },
+    {
+      "id": "color",
+      "name": "Hair Color",
+      "description": "Full color treatment.",
+      "price": 80,
+      "durationMinutes": 90
     }
   ]
 }
