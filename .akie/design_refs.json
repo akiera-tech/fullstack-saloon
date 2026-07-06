@@ -1,0 +1,26 @@
+{
+  "use_case": "modern marketing website",
+  "refs": [
+    {
+      "name": "Jeton",
+      "url": "https://www.burocratik.com/work/jeton",
+      "notes": "A subdued black-and-white platform featuring a signature orange color shade marks CTAs, balancing corporate trust and creativity in cinematic scrolls and an interactive footer without making users feel lost. The vibrant orange-and-white combination targets a youthful demographic, built on an app UI/UX for smooth transactions plus a 3D realm of coin-shaped metaphors. Density stays low and confident"
+    },
+    {
+      "name": "Dataland",
+      "url": "https://www.framer.com/blog/marketing-agency-websites/",
+      "notes": "Datalands' eye-catching hero section features Ozik, a display typeface designed specifically for headlines, logos, and signage, with black and white geometric typography instantly injecting personality. The contrast between the black-and-white text and a brightly colored project reel draws the eye to the studio's high-profile work, organized as a vertical stack of full-width cards that spotlight c"
+    },
+    {
+      "name": "Haptic Studio",
+      "url": "https://www.framer.com/blog/marketing-agency-websites/",
+      "notes": "Haptic Studio uses a striking orange and black color palette on its homepage to speak to its target audience of people with \"bold visions,\" with a unique animated button to book a call sitting in the hero, and looping video testimonials below the fold letting visitors hear firsthand from clients. The type is confident and heavy-weight, density is generous with breathing room around each module, an"
+    },
+    {
+      "name": "Aventura Dental Arts",
+      "url": "https://www.spinxdigital.com/blog/best-website-design/",
+      "notes": "Originally recognized as an Awwwards nomination among the best medical website designs, the platform is a masterclass in how luxury branding can coexist with authority, rooted in \"Aesthetic Empathy\" through a palette of warm, champagne-toned neutrals and sophisticated serif typography that mimics a boutique spa rather than a clinic. This intentional de-medicalization of the interface serves a stra"
+    }
+  ],
+  "shared": "Each site commits to one disciplined, temperature-consistent palette (a single accent against near-monochrome, or an all-warm neutral field) rather than multicolor decoration; each uses a signature typographic or motion device \u2014 a custom display face, a repeating brand-motif animation, or a persiste"
+}

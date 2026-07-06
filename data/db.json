@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "17e77738-213d-4ba4-87be-124851fa8ed4",
+      "name": "hamid",
+      "email": "hamid@akiera.co",
+      "passwordHash": "424207a5ab0de126a053baa2b258d3ccfe0bf2f60bc70aa19f98b61f721d148d29abe984dcc126f52421d3d619dcb9a1ec60d013982e298d65615308e3517f00",
+      "salt": "561b2f811dcd352cddb64724031e9c90",
+      "createdAt": "2026-07-06T10:35:18.890Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b82c28e6-9f2c-439f-97fd-4b7954ba5a68",
+      "userId": "17e77738-213d-4ba4-87be-124851fa8ed4",
+      "service": "Classic Hot-Towel Shave",
+      "stylist": "Priya Anand",
+      "date": "2026-07-06",
+      "time": "18:07",
+      "status": "cancelled",
+      "createdAt": "2026-07-06T10:35:40.976Z"
+    }
+  ]
+}
