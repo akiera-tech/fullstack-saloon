@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { fetchMe, fetchBookings, fetchServices, ApiUser, ApiBooking, ApiService } from "@/lib/api-client";
+import { fetchMe, fetchBookings, fetchServices, cancelBooking, ApiUser, ApiBooking, ApiService } from "@/lib/api-client";
 import BookingForm from "@/components/BookingForm";
 import BookingsTable from "@/components/BookingsTable";
 
@@ -53,11 +53,14 @@ export default function DashboardClient() {
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-        <BookingForm onCreated={refresh} />
+        <BookingForm onBooked={refresh} />
         <div>
           <p className="font-mono-op text-xs uppercase tracking-widest text-[var(--muted-fg)]">Your bookings</p>
           <div className="mt-3">
-            <BookingsTable bookings={bookings} services={services} onChanged={refresh} />
+            <BookingsTable bookings={bookings} services={services} onCancel={async (id) => {
+              await cancelBooking(id).catch(() => undefined);
+              refresh();
+            }} />
           </div>
         </div>
       </div>

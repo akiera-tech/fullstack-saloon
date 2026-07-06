@@ -21,10 +21,43 @@ export interface Booking {
   createdAt: string;
 }
 
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  durationMinutes: number;
+}
+
 interface DbShape {
   users: User[];
   bookings: Booking[];
+  services: Service[];
 }
+
+const DEFAULT_SERVICES: Service[] = [
+  {
+    id: 'haircut',
+    name: 'Haircut',
+    description: 'Classic haircut with wash and style.',
+    price: 35,
+    durationMinutes: 30,
+  },
+  {
+    id: 'beard-trim',
+    name: 'Beard Trim',
+    description: 'Precision beard shaping and trim.',
+    price: 20,
+    durationMinutes: 15,
+  },
+  {
+    id: 'color',
+    name: 'Hair Color',
+    description: 'Full color treatment.',
+    price: 80,
+    durationMinutes: 90,
+  },
+];
 
 const DB_PATH = path.join(process.cwd(), 'data', 'db.json');
 
@@ -32,15 +65,23 @@ function ensureDb(): void {
   const dir = path.dirname(DB_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(DB_PATH)) {
-    const initial: DbShape = { users: [], bookings: [] };
+    const initial: DbShape = { users: [], bookings: [], services: DEFAULT_SERVICES };
     fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2));
   }
 }
 
-function readDb(): DbShape {
+export function readDb(): DbShape {
   ensureDb();
   const raw = fs.readFileSync(DB_PATH, 'utf-8');
-  return JSON.parse(raw) as DbShape;
+  const db = JSON.parse(raw) as DbShape;
+
+  // Backfill services for existing db.json files created before this field existed
+  if (!db.services) {
+    db.services = DEFAULT_SERVICES;
+    writeDb(db);
+  }
+
+  return db;
 }
 
 function writeDb(data: DbShape): void {
