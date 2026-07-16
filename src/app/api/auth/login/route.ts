@@ -4,7 +4,7 @@ import { verifyPassword, createSession } from '@/lib/auth';
 
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
-  if (!body || typeof body.email !== 'string' || typeof body.password !== 'string') {
+  if !body || typeof body.email !== 'string' || typeof body.password !== 'string') {
     return NextResponse.json({ error: 'Email and password are required.' }, { status: 400 });
   }
   const user = getUserByEmail(body.email);
